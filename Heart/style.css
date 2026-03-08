@@ -1,0 +1,53 @@
+/* styles.css */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: #000; /* black background like your image */
+  color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* canvas covers whole area */
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Simple UI overlay */
+.ui {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: rgba(0,0,0,0.35);
+  padding: 8px 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.ui label { font-size: 13px; color: #f7f7f7; }
+.ui input[type="range"] { vertical-align: middle; }
+.ui input[type="color"] { width: 36px; height: 28px; border: none; padding: 0; background: transparent; }
+#toggleBtn {
+  background: #1b1b1b;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#toggleBtn:hover { opacity: 0.9; }
